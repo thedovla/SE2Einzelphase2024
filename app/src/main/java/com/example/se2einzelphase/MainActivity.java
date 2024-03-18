@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private TextView text;
     private EditText MNr;
@@ -31,6 +33,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String result = MNr.getText().toString();
                 new TCP(result,response).start();
+            }
+        });
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String input = MNr.getText().toString();
+                List<String> result = CommonAdviserCalculator.findDigitsWithCommonDivisor(input);
+                StringBuilder stringBuilder = new StringBuilder();
+                for (String s : result) {
+                    stringBuilder.append(s).append("\n");
+                }
+                response.setText(stringBuilder.toString());
             }
         });
     }
