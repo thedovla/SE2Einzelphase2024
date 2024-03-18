@@ -38,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Antwort vom Server"
+        android:textAlignment="center"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
