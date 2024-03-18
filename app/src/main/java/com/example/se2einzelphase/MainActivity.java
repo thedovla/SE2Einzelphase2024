@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText MNr;
     private TextView response;
     private Button sendMNr;
+    private Button calculate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         MNr = findViewById(R.id.inputText);
         response = findViewById(R.id.textView2);
         sendMNr = findViewById(R.id.button1);
+        calculate = findViewById(R.id.button2);
 
         sendMNr.setOnClickListener(new View.OnClickListener() {
             @Override
